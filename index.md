@@ -4,17 +4,30 @@
 
 
 <br>
-<br>
-<br>
 # Welcome! 
 
 
 
 Hello and welcome to my small collective space of thoughts, tools and tricks. 
 
-My name is Dominik and I am deeply curious about Knowledge (Graphs), Semantics, Cognition, Limitations of modelling. Here I am aiming to connect Computer Science, Mathematics, Philosophy and People.
-With the help of this blog, I am trying to do more by doing less. 
-More of the stuff that really matters and less of the cluttering dust of unimportantness. 
+My name is Dominik, I have studied Computer Science, Business as well as Philosphy in Munich and in Vienna.
+I am deeply curious about ... things. And non-things.
+
+
+*"The limits of my language mean the limits of my world."*
+- Luwdig Wittgenstein
+
+
+**What can you expect or find here?** 
+Mostly Work about on the intersection of Computer Science & Philosophy. 
+
+With this project I am aiming to connect Computer Science, Mathematics, Philosophy and us humans.
+Hence, I try to deepen my own understanding of this funny little universe we've fortunately been placed into. 
+
+
+
+
+
 
 
 Feel free to reach out to me any time via *info[at]dominik-pichler[dot]com*
@@ -23,7 +36,7 @@ Feel free to reach out to me any time via *info[at]dominik-pichler[dot]com*
 
 
 
-[Link Text](test.md)
+[Here's also a little index](test.md)
 
 
 
