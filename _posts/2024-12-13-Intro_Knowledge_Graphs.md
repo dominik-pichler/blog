@@ -1,6 +1,9 @@
 
 # Architecture & Graph Representation: 
 
+
+$$LateX Test$$
+
 ## Introduction: Steering away from RDBS?
 *Why should we even have a different representation like RDF or PG when we already have RDBS?*
 
