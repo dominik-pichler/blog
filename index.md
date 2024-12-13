@@ -2,6 +2,10 @@
 
 <img src="assets/images/babel_bro.jpg" alt="Alt text">
 
+<br>
+<br>
+<br>
+
 
 
 
@@ -15,11 +19,6 @@ More of the stuff that really matters and less of the cluttering dust of unimpor
 Feel free to reach out to me any time via *info[at]dominik-pichler[dot]com*
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
 
