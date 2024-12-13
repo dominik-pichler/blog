@@ -1,6 +1,6 @@
 
 
-<img src="assets/images/luwi.png" alt="Alt text" style="max-width: 100%; max-height: 350px;>
+<img src="assets/images/luwi.png" alt="Alt text" style="max-width: 100%; max-height: 350px;">
 
 
 <br>
