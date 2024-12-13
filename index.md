@@ -1,6 +1,6 @@
 
 
-<img src="assets/images/platon_bro.jpg" alt="Alt text">
+<img src="assets/images/platon_bro.png" alt="Alt text">
 
 <br>
 <br>
