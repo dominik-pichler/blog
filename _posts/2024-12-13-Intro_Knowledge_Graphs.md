@@ -1,8 +1,8 @@
 
+
+
 # Architecture & Graph Representation: 
 
-
-$$LateX Test$$
 
 ## Introduction: Steering away from RDBS?
 *Why should we even have a different representation like RDF or PG when we already have RDBS?*
@@ -74,7 +74,7 @@ As KGs live in a world that rests on computers, designing machine-readable KGs i
 Formal logics are used to form a basis for (advanced) knowledge representation. 
 Thereby a formal, logic-based language provides: 
 - A Syntax (Defining which Language Expressions are correct)
-- A Semantic (Defining the meaning of expressions) - > TODO: Summary of Semantics of Meanings and what different concepts are linked to meaning. (This will be much! fun). For now, semantics always lives in a domain $\Delta^I$ where objects and their meaning will be mapped to this domain via an interpretation function $(\Gamma_I)$
+- A Semantic (Defining the meaning of expressions) - > TODO: Summary of Semantics of Meanings and what different concepts are linked to meaning. (This will be much! fun). For now, semantics always lives in a domain $$\Delta^I$$ where objects and their meaning will be mapped to this domain via an interpretation function $(\Gamma_I)$
 
 
 
@@ -82,7 +82,7 @@ Thereby a formal, logic-based language provides:
 - A Calculus (which determines how meaninigs of expressions can be determined)
 
 For building/enriching ontolgy based knowledge representations with descriptive logics, the following elements can be used: 
-$$
+
  1. DL ontologies are based on three kinds of building blocks:
     I.   *concepts* represent sets of individuals
     II.  *roles* represent binary relations between the individuals
