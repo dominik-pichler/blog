@@ -1,8 +1,5 @@
 
-<center>
-  <img src="_imgs/babel_bro.jpg" alt="Centered Image" />
-</center>
-
+<img src="_imgs/babel_bro.jpg" alt="Centered Image" style="display: block; margin-left: auto; margin-right: auto;" />
 
 Welcome Welcome to my small collective space of thoughts, tools and tricks. 
 
