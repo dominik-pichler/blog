@@ -10,6 +10,11 @@ This is a sample blog post. You can talk about all sorts of fun things here.
 
 ### This is a header
 
+### Latex test
+```latex
+x = l
+```
+
 #### Some T-SQL Code
 
 ```tsql
