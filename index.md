@@ -1,5 +1,7 @@
-Here you can say lots of fun things about your site.
+Welcome Welcome to my small collective space of thoughts, tools and tricks. 
 
-Maybe say a some things about yourself.
+I am deeply curious about Knowledge (Graphs), Semantics, Cognition, Limitations of modelling.
 
-Or maybe what you plan to blog about.
+Feel free to reach out to me any time via $info[at]dominik-pichler[dot]com$
+
+Y
