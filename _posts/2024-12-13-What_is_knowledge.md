@@ -1,7 +1,7 @@
 
 
 
-# Graphs are not only pretty: 
+# What the hell is this knowlege? 
 
 
 ## Introduction: Steering away from RDBS?
