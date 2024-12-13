@@ -14,15 +14,11 @@ My name is Dominik, I have studied Computer Science, Business as well as Philosp
 I am deeply curious about ... things. And non-things.
 
 
-*"The limits of my language mean the limits of my world."*
-- Luwdig Wittgenstein
-
-
-**What can you expect or find here?** 
+**What can you expect or find here?** <br> 
 Mostly Work about on the intersection of Computer Science & Philosophy. 
 
 With this project I am aiming to connect Computer Science, Mathematics, Philosophy and us humans.
-Hence, I try to deepen my own understanding of this funny little universe we've fortunately been placed into. 
+On the side, I try to deepen my own understanding of this funny little universe we've fortunately been placed into. 
 
 
 
