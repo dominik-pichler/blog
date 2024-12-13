@@ -2,34 +2,9 @@
 
 
 # What the hell is this knowlege? 
-
-    ```
-                ,-----.
-               #,-. ,-.#
-              () a   e ()
-              (   (_)   )
-              #\_  -  _/#
-            ,'   `"""`    `.
-          ,'      \X/      `.
-         /         X     ____\
-        /          v   ,`  v  `,
-       /    /         ( <==+==> )
-       `-._/|__________\   ^   /
-      (\\)  |______@____\  ^  /
-        \\  |     ( )    \ ^ /
-         )  |             \^/
-        (   |             |v
-       <(^)>|             |
-         v  |             |
-            |             |
-            |_.--.__ .--._|
-              `==='  `==='
-    
-        ```
+What a question. But lets start out small. I assume that in order to understand what knowlege is, I need to start out be defining information first.
 
 
-
-# Thoughts
 ## What is Information ?
 
 > "In the nights when I cannot sleep, thoughts crowd into my mind ...
@@ -77,7 +52,7 @@ theory is a basic ingredient of the communication engineers training.
 
 
 
-### 3. Shannon's Communication/Information Theory
+#### 3. Shannon's Communication/Information Theory
 According to Shannon (1948; see also Shannon and Weaver 1949), a general
 communication system consists of five parts:
 
@@ -91,7 +66,6 @@ receiver.
 * A receiver R, which reconstructs the message from the signal.
 * A destination D, which receives the message. 
 <br><br>
- ![img.png](img.png)
 
 
 
@@ -102,10 +76,10 @@ Information is defined as a decrease in uncertainty. For example, if Bob is tryi
 **Entropy**
 Entropy quantifies the amount of uncertainty involved in the value of a random variable or the outcome of a random process. It is measured by the formula
 
-$$\[H(X) := -\sum_{x \in X} p(x) \log p(x)\]$$
+$$H(X) := -\sum_{x \in X} p(x) \log p(x)$$
 
 
-where $\[H(X)]$ can be seen as a degree of suprise, or spoken very causually, might be seen as the number of yes/no question one needs to ask (and get answered) to obtain a certain message)
+where $H(X)$ can be seen as a degree of suprise, or spoken very causually, might be seen as the number of yes/no question one needs to ask (and get answered) to obtain a certain message)
 
 
 
@@ -176,12 +150,14 @@ and defines Information as a concatenation of symbols (letters).
 
 
 
-## Measuring Information?
-### Kolmogorov Complexity
+### Measuring Information
+Now, as the term information started to make more sense, I was wondering, can I quantify the "amount" of information, present in some-thing ? Fortunately, there are already some thoughts and results on this: 
+
+#### Kolmogorov Complexity
 
 Kolmogorov complexity is a concept in algorithmic information theory that quantifies the complexity of a string based on the length of the shortest program (or description) that can produce that string when executed on a universal Turing machine. It provides a formal way to measure the information content or randomness of individual strings, distinguishing between simple and complex data.
 
-### Definition
+##### Definition
 
 The Kolmogorov complexity $$ K(x) $$ of a string $x$ is defined as:
 
@@ -191,14 +167,14 @@ $$
 
 where $U$ is a universal Turing machine, $p$ is a program that outputs $x$, and $\ell(p)$ is the length of the program in bits. This means that $K(x)$ is the length of the shortest effective description of $x$ .
 
-### Intuition and Examples
+##### Intuition and Examples
 
 Intuitively, a string is considered simple if it can be described concisely, such as "the string of one million zeros." Conversely, a string is complex if it lacks a shorter description, like a random sequence of digits. For example:
 
 - The string "00000000" can be described as "zero repeated 8 times," making its Kolmogorov complexity low.
 - A random string of 8 bits, such as "10101100," has a high Kolmogorov complexity because it cannot be compressed into a shorter description without losing information .
 
-### Incompressibility
+##### Incompressibility
 
 A string is termed **incompressible** if its Kolmogorov complexity is at least as long as the string itself, that is:
 
@@ -207,7 +183,7 @@ $$
 
 This implies that there is no shorter program that can generate the string, indicating a high level of randomness or complexity .
 
-### Applications
+#### Applications
 
 Kolmogorov complexity has significant implications in various fields, including:
 
