@@ -3,342 +3,218 @@
 
 # What the hell is this knowlege? 
 
+    ```
+                ,-----.
+               #,-. ,-.#
+              () a   e ()
+              (   (_)   )
+              #\_  -  _/#
+            ,'   `"""`    `.
+          ,'      \X/      `.
+         /         X     ____\
+        /          v   ,`  v  `,
+       /    /         ( <==+==> )
+       `-._/|__________\   ^   /
+      (\\)  |______@____\  ^  /
+        \\  |     ( )    \ ^ /
+         )  |             \^/
+        (   |             |v
+       <(^)>|             |
+         v  |             |
+            |             |
+            |_.--.__ .--._|
+              `==='  `==='
+    
+        ```
 
-## Introduction: Steering away from RDBS?
-*Why should we even have a different representation like RDF or PG when we already have RDBS?*
-
-While relational databases remain indispensable for many traditional applications, RDF and property graphs provide specialized solutions for modern challenges involving complex relationships, dynamic schemas, and semantic reasoning. The choice between these models depends on the specific requirements of your application—whether it's structured tabular data (RDB), semantic richness (RDF), or dynamic graph traversal (property graphs).
-
-Which can be boiled down to the following advantages of RDF/PG over RDBS: 
-- **Flexibility in Schema:** This flexibility is particularly useful when dealing with unstructured or semi-structured data or when the data model evolves frequently.
-- **Ability to handle complex relationships**
-- **Advanced Querying Capabliities** trough powerfull QLs like `SPARQL ` `Cypher`or `Gremlin `, ...
-- **Easier integration of heterogeneous data sources**
-- **Scaleability and Performance**: Graph databases (including RDF stores) are designed to handle large volumes of interconnected data efficiently. They avoid costly join operations required in RDBs by directly storing relationships as part of the data model. This makes them more performant for relationship-heavy queries
 
 
-## Two mainstream approaches for Graph Modelling, Storing and Quering: 
+# Thoughts
+## What is Information ?
 
-**Property Graphs (PG)**
-- e.g., Neo4J, JanusGraph, OrientDB
-- Programmer-friendly
-- Fast
-- Edge’s attributes
+> "In the nights when I cannot sleep, thoughts crowd into my mind ...
+> Whence and how do they come? I do not know and I have nothing to do with it. Those which please me, I keep in my head an hum them."
 
-**Resource Description Framework (RDF)**
-- e.g., GraphDB, StarDog, Virtuoso
-- Globally unique ID
-- Interoperability-at-scale
-- (shared) Schema-based
+
+
+### Working definition of Information
+What is information? For this question, many different concepts and theories exist. I'll try to create a helpful overview by listing various well established definitions before defining a working definition in this project.
+
+#### 1. Oxford Dictionary
+According to the Oxford dictionary, Information can be defined as "*facts or details about somebody/something*", with leads to the need of defining what a "Fact" or "Detail" as well as what "something" entails.
+In order to get  going, some working definitions have to be made here.
+
+#### 2. More perspectives:
+Information is a classic polysemantic word, where it's semantic meaning is largely dependent the given perspective. 
+
+Hence I want to list the, to my understanding, most common perspectives on Information:
+
+
+* **Philosophical Perspective:** <br>
+Strongly related with notions such as reference, meaning and representation: semantic information has
+intentionality −“aboutness”−, it is directed to other things
+
+
+* **Scientific Perspective**: <br>
+Problems are expressed in terms of a notion of information amenable to
+quantification
+* **Mathematical Persepective**:
+<br/><br/>
+    * **Fisher Information:**<br>
+      Measures the dependence of a random variable X on an unknown parameter θ upon which
+the probability of X depends
+  <br/><br/>
+    * **Algorithmic information**:<br> 
+      Measures the length of the shortest program that produces a string on a universal [Turing machine](../utils/turing_machines/notes_turing). 
+  <br/><br/>
+    * **von Neumann Entropy**<br>
+      Gives a measure of the quantum resources necessary to faithfully encode the state of the source-system;
+      <br/><br/>
+    * **Shannon Entropy**:<br> is concerned with the statistical
+properties of a given system and the correlations between the states of two systems,
+independently of the meaning and any semantic content of those states. Nowadays, Shannon’s
+theory is a basic ingredient of the communication engineers training. 
+
+
+
+### 3. Shannon's Communication/Information Theory
+According to Shannon (1948; see also Shannon and Weaver 1949), a general
+communication system consists of five parts:
+
+* A source S, which generates the message to be received at the destination.
+
+* A transmitter T, which turns the message generated at the source into a signal to be transmitted.
+In the cases in which the information is encoded, encoding is also implemented by this system.
+
+* A channel CH, that is, the medium used to transmit the signal from the transmitter to the
+receiver.
+* A receiver R, which reconstructs the message from the signal.
+* A destination D, which receives the message. 
+<br><br>
+ ![img.png](img.png)
+
+
+
+#### Central Definitions: 
+**Information as a Decrease in Uncertainty**
+Information is defined as a decrease in uncertainty. For example, if Bob is trying to guess which shape Alice is holding, and Alice tells him it is blue, this reduces the set of possible shapes, thereby decreasing Bob's uncertainty.
+
+**Entropy**
+Entropy quantifies the amount of uncertainty involved in the value of a random variable or the outcome of a random process. It is measured by the formula
+
+$$\[H(X) := -\sum_{x \in X} p(x) \log p(x)\]$$
+
+
+where $\[H(X)]$ can be seen as a degree of suprise, or spoken very causually, might be seen as the number of yes/no question one needs to ask (and get answered) to obtain a certain message)
+
+
+
+**Link from Physics to Informationtheory & Entropy**
+To quote from [Maxwell and his deamon](https://www.ias.ac.in/public/Volumes/reso/015/06/0548-0560.pdf):
+
+> Moral. The 2nd law of thermodynamics has the same degree of truth as the statement that if you throw a tumberflu of water into the sea, you cannot ge tthe same tumblerflu of water out again
+
+
+which led to physicists speaking about micro- and macrostates where entropy became a physical equivalent of probabilty: The entropy of a given macro state is the logarithm of the number of possbiel micro-states.
+
+More on that can be found here: [Maxwells Daemon](https://www.spektrum.de/lexikon/physik/maxwellscher-daemon/9530)
+
+This daemon led Szilárd to close the loop leading to shannons conception of entropy by establishing that every time, maxwells daemon had to make a (particel) decsion, it costs the daemon a certain "something", which can be defined as *Information*.
+
+So eventually, it is all one problem. 
+To reduce entropy in a box of gas, to perfom useful work, one pays the price of information.
+
+**Binary Digits (Bits)**
+Shannon introduced the concept of binary digits, or bits, as the fundamental unit of information. A bit is a binary digit that can take on one of two values, typically 0 or 1. This concept revolutionized the way information was quantified and transmitted.
+
 
  
-## (L)PG vs  RDF
-There are certain advantages of the property graph over the RDF graph.
-- First, the RDF triples are easy statements to produce but when the query takes place it may give a headache. 
-- Secondly, since relationships in the property graphs can have properties, this may simplify the modeling process. 
-- Thirdly, relationships that are repeated are counted as unique, e.g. a person like another person only one in the RDF representation
-- As far as I understand (L)PG does stop the Ontology on the directly present relationships and hence cares not about broader relationsships like
-   - Subclass
-   - Type
-   - Parent Class implications
-   - ....
+
+
+
+#### Ways of Information-Representation
+
+Due to limited time in this project, I limited the forms of information-representations to sets of language symbols (or corresponding sounds) $\Rightarrow$ will be abstracted as representations of Symbols (Letters), Words and Sentences.
+
+#### Information as Language Symbols: 
+
+ [Edward Gibson](https://bcs.mit.edu/directory/edward-gibson prosed or cited an interesting idea, namely that human language is constructed by us humans via words/sentences and serves as a tool to communicate with our fellows about things that are important to us. At least to me, this is very fascinating and led me to question wether you can identify what things are important to certain groups by comparing the relativ amount of descriptive words per topic that their languages contain? 
  
-  
+Apparently, across different language families, one can see structural patterns in word specifications per objects. For example, he claimed that in more tribal societies, the number speakable colour-categories is way smaller that in more modern (capitalistic) societies.
 
-Why do we use the RDF triples? Because they are the so easy way to transfer and save relationships and there are already a certain amount of the RDF data sources.
- In addition, the property graphs may be a burden on the applications. 
 
+#### What is it's minimal/essential structure of Language/Text? 
+Linguistics defining the smallest meaningful constituent of a linguistic expression as **morpheme** and assumes that the meaning of a sentence consists of stacked morphemes. 
+But this opens even more questions up to me: 
+1) How can one identify **Morphemes**? 
+2) How do single Morphemes compound to the total meaning (if something like this exists) of a whole sentence / text?  Where does the entire meaning rise from? 
 
-Rambles: 
-- RDF has troubles depiciting multiple identical relationsships between the same nodes
-- RDF has, generally speaking Higher Ontology-Building Complexity and scale
-- Most Graph Databases are based on LPG where there is no standard query language while RDF provides `SparQL`, `RDF Schema`, `OWL`, `SHACL`, `ShEX` 
 
+##### Text-Representations
+In order to analyse the meaning of text(s) 
+### Encoding
+**Encoding** is the process of converting categorical data into numerical data. It is often used to prepare data for machine learning algorithms that require numerical input
 
-#Building based on RDF: 
-Every RDF based KG Graph needs a ontology. 
- 
-# What are ontologies? 
-According to *Studer(98)*, an ontology is a "Formal, explicit specification of a shared conceptualization".
+**Assumption**: Every letter, and hence every text  can be encoded as a number (Example: ASCII).
+<br>With Standard ASCII, every Letter corresponds to **7 Bit**. Trough removal of redundancy, for example via the [Shannon-Fano compression](../utils/shannon_fano_coding.py), this number can be reduced slightly further, but nonetheless still more or less stupidly (or at least free of awareness of semantics) stores every letter explicitly
+and defines Information as a concatenation of symbols (letters).
 
-It's etymiological origin can be found (as so many things), back in old greece: 
+##### Embedding
+**Embedding** refers to the process of transforming data into a dense vector representation that captures semantic relationships. Common forms of emeddings include: 
 
-*Ontology* = *ontos*(being) + *logos* (lit. word, discourse, or reason)
-- Philosophy: Systematic explanation of Existence
-   - Aristotle (400BC) attempts to establish universal categories for
-classifying everything that exists
+* **1-Word-1Vector**:
+  * Word2Vec (Skip-Gram & CBOW)
+  * Glove
+  * A lot of specialized variants of the two
+* **1-Word-1-Vector+Char-n-grams**  
+  * FastText(based on Word2Vec)
+* **Contextualized / context dependent / complex structure (char or word piece based)** 
+  *   ELMo
+  * Transformers a la [BERT](../Embeddings/Bert.md) and its variants
 
-As KGs live in a world that rests on computers, designing machine-readable KGs is critical. Hence,  typically Ontologies for KGs are based on Formal Logic: 
 
-## (Descriptive) Logic and Ontologies
-Formal logics are used to form a basis for (advanced) knowledge representation. 
-Thereby a formal, logic-based language provides: 
-- A Syntax (Defining which Language Expressions are correct)
-- A Semantic (Defining the meaning of expressions) - > TODO: Summary of Semantics of Meanings and what different concepts are linked to meaning. (This will be much! fun). For now, semantics always lives in a domain $$\Delta^I$$ where objects and their meaning will be mapped to this domain via an interpretation function $(\Gamma_I)$
 
 
 
+## Measuring Information?
+### Kolmogorov Complexity
 
-- A Calculus (which determines how meaninigs of expressions can be determined)
+Kolmogorov complexity is a concept in algorithmic information theory that quantifies the complexity of a string based on the length of the shortest program (or description) that can produce that string when executed on a universal Turing machine. It provides a formal way to measure the information content or randomness of individual strings, distinguishing between simple and complex data.
 
-For building/enriching ontolgy based knowledge representations with descriptive logics, the following elements can be used: 
+### Definition
 
- 1. DL ontologies are based on three kinds of building blocks:
-    I.   *concepts* represent sets of individuals
-    II.  *roles* represent binary relations between the individuals
-    III. *individual names* represent single individuals in the domain
+The Kolmogorov complexity $$ K(x) $$ of a string $x$ is defined as:
 
-Unlike a database, a DL ontology does not fully describe a particular situation or
-“state of the world”; rather it consists of a set of statements, called axioms, which typically capture only partial knowledge about the described situation
+$$
+K(x) := \min_p \{ \ell(p) : U(p) = x \}
+$$
 
-Although there is no principal logical difference between different types of axioms, they are often separated into three groups: assertional (ABox) axioms, terminological (TBox) axioms and
-relational (RBox) axioms.
+where $U$ is a universal Turing machine, $p$ is a program that outputs $x$, and $\ell(p)$ is the length of the program in bits. This means that $K(x)$ is the length of the shortest effective description of $x$ .
 
+### Intuition and Examples
 
-1. Asserting Facts with ABox Axioms: Knowledge about Individuals / Entities
-2. Expressiong Terminal Knowledge with TBox Axioms: Knowledge about concepts of a domain.
-   
-    2.1. Boolean Concept Constructors
+Intuitively, a string is considered simple if it can be described concisely, such as "the string of one million zeros." Conversely, a string is complex if it lacks a shorter description, like a random sequence of digits. For example:
 
-    2.2 Role Restrictions
+- The string "00000000" can be described as "zero repeated 8 times," making its Kolmogorov complexity low.
+- A random string of 8 bits, such as "10101100," has a high Kolmogorov complexity because it cannot be compressed into a shorter description without losing information .
 
-    2.3. Nominals
-3. Characterising Roles with RBox Axioms
+### Incompressibility
 
+A string is termed **incompressible** if its Kolmogorov complexity is at least as long as the string itself, that is:
 
-Next, we summarise the features introduced in the previous sections to obtain a comprehensive definition of DL syntax. Doing so yields the DL called **SROIQ**, one of the most expressive DLs considered today, which is closely related to the ontology language **OWL 2 DL**.
+$$K(x) \geq |x|
+$$
 
+This implies that there is no shorter program that can generate the string, indicating a high level of randomness or complexity .
 
+### Applications
 
-## What can be inside an Ontology?
--  Concepts:
-    -  Denote the main concepts of the domain
-    - E.g.: Carnivore, Animal, Pump, Engine
--  Concept hierarchy
-    - denotes specialization/generalizations
-    - E.g.: Carnivore is a kind of Animal
-- Relations between classes
-   - E.g.: Carnivore eats Animal
-- Restrictions on relations (type, cardinality) 
-  -  E.g.: any Animal has at least one BodyPart
-- Instances:
-  - Denote concrete entities in the domain
-  - E.g.: Tom, Jerry
+Kolmogorov complexity has significant implications in various fields, including:
 
-## Examples of (Lightweight Ontologies): 
-- Controlled Vocabulary: finite list of terms (e.g., a catalogue)
-- Glossary:finite list of terms + informal definition in natural language
-- Thesauri:
-controlled vocabulary + concepts are connected with relations 
-   – Equivalency (synonyms)
-   – Hierarchies (subclasses, superclasses)
-   – Homographs (Homonyms)
-   – Associations (similar concepts) 
+- **Information Theory**: It helps in understanding the limits of data compression and the nature of information.
+- **Machine Learning**: It can be used to evaluate the complexity of models and data sets.
+- **Philosophy**: It raises questions about the nature of randomness and the definition of information .
 
-From there different Heavyweight Ontologies can be built by introducting extensions like: 
-- Formal IS-A
-- Frames
-- Value Restrictions
-- General logic constraints
-- Disjunctiveness, Part-of,....
+In summary, Kolmogorov complexity provides a rigorous framework for analyzing the complexity of strings and understanding the fundamental limits of computation and information.
 
 
-
-### Some DL practical examples: 
-Symmetry
-- If P(x,y) =>P(y,x)
-- E.g., marriedTo, friendOf, adjacentRegion
-
-
-Transitivity
-- If P(x,y) and P(y,z) => P(x, z)
--  E.g., locatedIn, hasAncestor
-
-
-Inverse properties
-- If P(x,y) => InvP(y,x) holds
--  E.g., hasParent(John, Bob)=> hasChild(Bob, John)
-
-  
-Functional values
-- can have only one (unique) value y for each instance x
-- i.e. there cannot be two distinct values y1 and y2 such that the pairs (x,y1)
-and (x,y2) are both instances of this property
--  E.g., hasHusband
-
-## What can i do with ontologies? 
-Thanks to the formal nature of ontologies (their grounding in logic),
-reasoning can be used to infer new knowledge based on already
-declared information. Reasoning is performed with reasoners (inference engines).
-
-Reasoning allows for, e.g.,:
-- Consistency checking: Checking the correctness of the ontology model
-(e.g., that the model described by the ontology is free of logical
-contradictions)
-- Class inferences: discovering relation between classes that were not
-explicitly declared.
--  Instance inferences: discovering class membership of instances.
-
-
-
-## Building an Ontology with RDF: 
-
-Basic RDF building block
-- Subject: a resource, which may be identified with a URI
-- Predicate: a URI-identified specification of the relationship between
-subject and object
-- Object: a resource or literal to which the subject is related
-
-### URI: What and why?
-In the semantic web, there a two basic principles regarding identifiers: 
-1. Everything has an identifier
-2. One Name for one resource
-
-
-URI: Uniform Resource typically constists of two elements: 
-- URN (RFC 2141): Uniform Resource Name
-  - persistent identifier within a particular namespace
-  - Refers to a resource without implying location or how to access it
-  - e.g., urn:isbn:0-486-27557-4 refers to a specific edition of Shakespeare’s Romeo and Juliet
-- URL (RFC 1738):
-   - Uniform Resource Locator
-   - specifies (primary) access mechanism
-   -  may change during the lifetime of a resource
-
-
-This eventually yields: $URI = URN+URL$
-
-### RDF(S) Vocabluary: 
-
-RDF and RDFS (its extenision), are equippted with the following 
-
-
-#### **RDF Classes**
-- **rdf:XMLLiteral**  
-  The class of XML literal values.
-- **rdf:Property**  
-  The class of properties.
-- **rdf:Statement**  
-  The class of RDF statements.
-- **rdf:Alt, rdf:Bag, rdf:Seq**  
-  Containers of alternatives, unordered containers, and ordered containers (*rdfs:Container* is a super-class of the three).
-- **rdf:List**  
-  The class of RDF Lists.
-- **rdf:nil**  
-  An instance of *rdf:List* representing the empty list.
-
-#### **RDFS Classes**
-- **rdfs:Resource**  
-  The class resource, everything.
-- **rdfs:Literal**  
-  The class of literal values, e.g., strings and integers.
-- **rdfs:Class**  
-  The class of classes.
-- **rdfs:Datatype**  
-  The class of RDF datatypes.
-- **rdfs:Container**  
-  The class of RDF containers.
-- **rdfs:ContainerMembershipProperty**  
-  The class of container membership properties (*rdf:_1*, *rdf:_2*, ...), all of which are sub-properties of *rdfs:member*.
-
----
-
-#### **RDF Properties**
-- **rdf:type**  
-  An instance of *rdf:Property* used to state that a resource is an instance of a class.
-- **rdf:first**  
-  The first item in the subject RDF list.
-- **rdf:rest**  
-  The rest of the subject RDF list after *rdf:first*.
-- **rdf:value**  
-  Idiomatic property used for structured values.
-- **rdf:subject**  
-  The subject of the RDF statement.
-- **rdf:predicate**  
-  The predicate of the RDF statement.
-- **rdf:object**  
-  The object of the RDF statement.
-
-> Note: *rdf:Statement*, *rdf:subject*, *rdf:predicate*, and *rdf:object* are used for reification.
-
----
-
-#### **RDFS Properties**
-- **rdfs:subClassOf**  
-  The subject is a subclass of a class.
-- **rdfs:subPropertyOf**  
-  The subject is a subproperty of a property.
-- **rdfs:domain**  
-  A domain of the subject property.
-- **rdfs:range**  
-  A range of the subject property.
-- **rdfs:label**  
-  A human-readable name for the subject.
-- **rdfs:comment**  
-  A description of the subject resource.
-- **rdfs:member**  
-  A member of the subject resource.
-- **rdfs:seeAlso**  
-  Further information about the subject resource.
-- **rdfs:isDefinedBy**  
-  The definition of the subject resource.
-
-
-### Notation Types:
-- Graph notation
-- RDF/XML (historically first serialization format)
--  N3/Turtle -> Many URIs share the same basis → use prefixes for namespace declarations
--  N-Triples
--  JSON-LD
-
-
-For the rest of the post, I'll stick to N3/Turtle.
-
-
-### N3/Turtle:
-Example of N3/Turtle: 
-```
-exstaff:111 exterms:address exaddressid:111 .
-exaddressid:111 exterms:street "Teststraße 11" .
-exaddressid:111 exterms:city "Vienna" .
-exaddressid:111 exterms:state "Vienna" .
-exaddressid:111 exterms:postalCode "1140" . 
-```
-
-#### Edge Cases and special Graph properties: 
-- RDF Blank Nodes
-- Reification: Making Statements about statements
-  - Alternatives:
-    - Standardf reification
-    - Singleton
-    - Named Graphs -> Problem: Requires efficient graph indexing which is not always supported
-    - RDF* `:Dominik :claims <<:Stefan :looks :happy>> `
- 
- - Container   (Open Lists) 
- - Collections (Closed Lists)
-
-
-## RDFs extension: OWL
-Short for *Web Ontology Language*
-
-
-W3C Recommendation (since 2024) for the representation of ontologies
-- Fully-fledged knowledge representation language for the Web
-- Provides a wider range of ontological constructs and avoids some of the potential confusion in RDFS
-- Formal foundations: Description Logics (DL)
-   - well-defined semantics
-   - Well-understood properties (e.g., computational complexity)
-   - allows to verify consistency of defined knowledge
-   - inferencing allows to make implicit knowledge explicit
-   - many tools available
-- OWL ontologies can be exchanged as RDF documents
- 
-OWL extends RDF Schema to a fully-fledged knowledge representation language for the Web, icnluding Logical expressions, Local properties, Required/optional properties, Required values, Enumerated classes. Symmetry, inverse and many more ... 
-
-Hence, this allows for a way richer approach to ontology building. 
-
-
---- 
-**Great Tools**
-- Protege for Ontology Building
-- Caveat: Definition of infinite recursions and cycles
