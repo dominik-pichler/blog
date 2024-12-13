@@ -1,7 +1,7 @@
 
 
 
-# Architecture & Graph Representation: 
+# Graphs are not only pretty: 
 
 
 ## Introduction: Steering away from RDBS?
