@@ -47,7 +47,8 @@ hr {
 .site-header {
   border-top: 0px solid #424242 !important}
 
-  *{
+  body * {
     font-family: 'Poppins', sans-serif;
-    font-weight: 300 !important; /* Or 300 for Light */
-    }
+    font-weight: 300 !important;
+  }
+  
