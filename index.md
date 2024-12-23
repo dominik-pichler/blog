@@ -4,17 +4,17 @@
 
 
 <br>
-# Welcome! 
+# Welcome
 
 
 
 Hello and welcome to my small collective space of thoughts, tools and tricks. 
 
-My name is Dominik, I have studied Computer Science, Business as well as Philosphy in Munich and in Vienna.
+My name is Dominik, I have studied Computer Science, Physics as well as Philosphy in Munich and in Vienna.
 I am deeply curious about ... things. And non-things.
 
 
-**What can you expect or find here?** <br> 
+What can you expect or find here?
 Mostly Work about on the intersection of Computer Science & Philosophy. 
 
 With this project I am aiming to connect Computer Science, Mathematics, Philosophy and us humans.
