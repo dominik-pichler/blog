@@ -76,9 +76,6 @@ Thereby a formal, logic-based language provides:
 - A Syntax (Defining which Language Expressions are correct)
 - A Semantic (Defining the meaning of expressions) - > TODO: Summary of Semantics of Meanings and what different concepts are linked to meaning. (This will be much! fun). For now, semantics always lives in a domain $$\Delta^I$$ where objects and their meaning will be mapped to this domain via an interpretation function $(\Gamma_I)$
 
-
-
-
 - A Calculus (which determines how meaninigs of expressions can be determined)
 
 For building/enriching ontolgy based knowledge representations with descriptive logics, the following elements can be used: 
