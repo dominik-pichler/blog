@@ -61,4 +61,4 @@ According to Heckenhausen (2008)[^1]
 [^2]: White, R. W. (1959). Motivation reconsidered: The concept of competence. Psychological Review, 66(5), 297–333. https://doi.org/10.1037/h0040934
 
 
-[^3]Janos, O., & Papoušek, H. (1977). Acquestion of appeti- tion and palpebral conditioned reflexes by the same infants. Early Human Development, 1, 91–97.
+[^3]: Janos, O., & Papoušek, H. (1977). Acquestion of appeti- tion and palpebral conditioned reflexes by the same infants. Early Human Development, 1, 91–97.
