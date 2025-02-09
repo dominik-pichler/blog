@@ -24,19 +24,19 @@ Strongly related with notions such as reference, meaning and representation: sem
 **Scientific Perspective**: <br>
 Problems are expressed in terms of a notion of information amenable to quantification.
 
-**Mathematical Persepective**:
-<br/><br/>
-    - Fisher Information:<br>
-      Measures the dependence of a random variable X on an unknown parameter θ upon which the probability of X depends
-  <br/><br/>
-    - Algorithmic information:<br> 
-      Measures the length of the shortest program that produces a string on a universal Turing machine. 
-  <br/><br/>
-    - von Neumann Entropy<br>
-      Gives a measure of the quantum resources necessary to faithfully encode the state of the source-system.
-      <br/><br/>
-    - Shannon Entropy:<br> is concerned with the statistical properties of a given system and the correlations between the states of two systems, independently of the meaning and any semantic content of those states. 
+## Mathematical Perspective
 
+- **Fisher Information**:  
+    Measures the dependence of a random variable \( X \) on an unknown parameter \( \theta \) upon which the probability of \( X \) depends.
+
+- **Algorithmic Information**:  
+    Measures the length of the shortest program that produces a string on a universal Turing machine.
+
+- **von Neumann Entropy**:  
+    Gives a measure of the quantum resources necessary to faithfully encode the state of the source-system.
+
+- **Shannon Entropy**:  
+    Concerned with the statistical properties of a given system and the correlations between the states of two systems, independently of the meaning and any semantic content of those states.
 
 
 ## But why should we care?  
@@ -113,6 +113,8 @@ Amazing.
 But what's behind this? What is it that we want to convey?
 This theory already works with a message, that is supposed to be sent/transmitted. But what is this meassage and how can we understand it's meaning? 
 For this question, I'd like to take *language* as my vehicle of investigation. More concretely, the *Theory of meaning in languages*
+
+#### Information in Language
 As an introduction, I want to share a very interesting idea: 
 
  [Edward Gibson](https://bcs.mit.edu/directory/edward-gibson) prosed an interesting idea, namely that human language is constructed by us humans via words/sentences and serves as a tool to communicate with our fellows about things that are important to us. At least to me, this is very fascinating and led me to question wether you can identify what things are important to certain groups by comparing the relativ amount of descriptive words per topic that their languages contain? 
