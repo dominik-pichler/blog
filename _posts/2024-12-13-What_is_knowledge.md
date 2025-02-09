@@ -4,9 +4,6 @@
 # What the hell is this knowlege? 
 What a question. But lets start out small. I assume that in order to understand what knowlege is, I need to start out be defining information first.
 
-
-# What is Information ?
-
 > "In the nights when I cannot sleep, thoughts crowd into my mind ...
 > Whence and how do they come? I do not know and I have nothing to do with it. Those which please me, I keep in my head an hum them."
 
@@ -15,10 +12,10 @@ What a question. But lets start out small. I assume that in order to understand 
 ## Attempts to find a working definition of *Information*
 What is information? For this question, many different concepts and theories exist. I'll try to create a helpful overview by listing various well established definitions before defining a working definition in this project.
 
-### 1. Oxford Dictionary
+##### 1. Oxford Dictionary
 According to the Oxford dictionary, Information can be defined as "*facts or details about somebody/something*"
 
-### 2. More perspectives:
+##### 2. More perspectives:
 Information is a classical polysemantic word, where it's semantic meaning is largely dependent the given perspective. 
 Hence I want to list the, to my understanding, most common perspectives on Information:
 
@@ -27,10 +24,10 @@ Hence I want to list the, to my understanding, most common perspectives on Infor
 Strongly related with notions such as reference, meaning and representation: semantic information has intentionality −“aboutness”−, it is directed to other things.
 
 
-* **Scientific Perspective**: <br>
+**Scientific Perspective**: <br>
 Problems are expressed in terms of a notion of information amenable to quantification.
 
-* **Mathematical Persepective**:
+**Mathematical Persepective**:
 <br/><br/>
     **Fisher Information:**<br>
       Measures the dependence of a random variable X on an unknown parameter θ upon which the probability of X depends
@@ -113,7 +110,7 @@ Amazing.
 [Escher](../assets/images/escher_1.jpeg)
  
 
-<img src="assets/images/escher_1.jpeg" alt="Alt text">
+<img src="../assets/images/escher_1.jpeg" alt="Alt text">
 
 
 #### Ways of Information-Representation
