@@ -11,13 +11,11 @@ What a question. But lets start out small. I assume that in order to understand 
 
 ## Attempts to find a working definition of *Information*
 What is information? For this question, many different concepts and theories exist. I'll try to create a helpful overview by listing various well established definitions before defining a working definition in this project.
-
-##### 1. Oxford Dictionary
-According to the Oxford dictionary, Information can be defined as "*facts or details about somebody/something*"
-
-##### 2. More perspectives:
 Information is a classical polysemantic word, where it's semantic meaning is largely dependent the given perspective. 
 Hence I want to list the, to my understanding, most common perspectives on Information:
+
+**Oxford Dictionary**
+According to the Oxford dictionary, Information can be defined as "*facts or details about somebody/something*"
 
 
 **Philosophical Perspective:** <br>
@@ -29,16 +27,16 @@ Problems are expressed in terms of a notion of information amenable to quantific
 
 **Mathematical Persepective**:
 <br/><br/>
-    **Fisher Information:**<br>
+    - Fisher Information:<br>
       Measures the dependence of a random variable X on an unknown parameter θ upon which the probability of X depends
   <br/><br/>
-    **Algorithmic information**:<br> 
+    - Algorithmic information:<br> 
       Measures the length of the shortest program that produces a string on a universal Turing machine. 
   <br/><br/>
-    **von Neumann Entropy**<br>
+    - von Neumann Entropy<br>
       Gives a measure of the quantum resources necessary to faithfully encode the state of the source-system.
       <br/><br/>
-    **Shannon Entropy**:<br> is concerned with the statistical properties of a given system and the correlations between the states of two systems, independently of the meaning and any semantic content of those states. 
+    - Shannon Entropy:<br> is concerned with the statistical properties of a given system and the correlations between the states of two systems, independently of the meaning and any semantic content of those states. 
 
 
 
@@ -69,8 +67,8 @@ receiver.
 <br><br>
 
 
+In his proposed theory, he also proposed the following definitions: 
 
-#### Central Definitions:
 
 **Binary Digits (Bits)**
 Shannon introduced the concept of binary digits, or bits, as the fundamental unit of information. 
