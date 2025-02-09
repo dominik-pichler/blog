@@ -107,7 +107,7 @@ To reduce entropy in a box of gas, to perfom useful work, one pays the price of 
 
 Amazing.
 
-[Escher](../assets/images/escher_1.jpeg)
+![Escher](../assets/images/escher_1.jpeg)
  
 
 <img src="../assets/images/escher_1.jpeg" alt="Alt text">
