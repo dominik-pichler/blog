@@ -45,9 +45,14 @@ Problems are expressed in terms of a notion of information amenable to quantific
 
 
 
-## Famous theories dealing with *Information*: 
+## But why should we care?  
 
-### 1. Shannon's Communication/Information Theory
+
+### 1. Communication
+Based on my limitied experience and time on this plant, I was that a fundamental need of all (or lets say maybe most) humans, is to communicate with others, to share, expresse and partake in the very existance of each other.
+Besides the aspects of needs, communication also has a very pratical aspect to itself: It helps us, to navigate through this world, to reach our goals and to eventually continue our survival. 
+
+#### Shannon's Communication/Information Theory
 In this theory, information is thought of as a set of possible messages, and the goal is to send these messages over a noisy channel, 
 and to have the receiver reconstruct the message with low probability of error, in spite of the channel noise.
 
@@ -108,6 +113,7 @@ Amazing.
 [Escher](../assets/images/escher_1.jpeg)
  
 
+<img src="assets/images/escher_1.jpeg" alt="Alt text">
 
 
 #### Ways of Information-Representation
@@ -116,7 +122,7 @@ Due to limited time in this project, I limited the forms of information-represen
 
 #### Information as Language Symbols: 
 
- [Edward Gibson](https://bcs.mit.edu/directory/edward-gibson prosed or cited an interesting idea, namely that human language is constructed by us humans via words/sentences and serves as a tool to communicate with our fellows about things that are important to us. At least to me, this is very fascinating and led me to question wether you can identify what things are important to certain groups by comparing the relativ amount of descriptive words per topic that their languages contain? 
+ [Edward Gibson](https://bcs.mit.edu/directory/edward-gibson) prosed or cited an interesting idea, namely that human language is constructed by us humans via words/sentences and serves as a tool to communicate with our fellows about things that are important to us. At least to me, this is very fascinating and led me to question wether you can identify what things are important to certain groups by comparing the relativ amount of descriptive words per topic that their languages contain? 
  
 Apparently, across different language families, one can see structural patterns in word specifications per objects. For example, he claimed that in more tribal societies, the number speakable colour-categories is way smaller that in more modern (capitalistic) societies.
 
@@ -197,4 +203,6 @@ Kolmogorov complexity has significant implications in various fields, including:
 
 In summary, Kolmogorov complexity provides a rigorous framework for analyzing the complexity of strings and understanding the fundamental limits of computation and information.
 
+
+## Information & Lanuage
 
