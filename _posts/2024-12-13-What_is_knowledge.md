@@ -12,64 +12,69 @@ What a question. But lets start out small. I assume that in order to understand 
 
 
 
-### Working definition of Information
+## Attempts to find a working definition of *Information*
 What is information? For this question, many different concepts and theories exist. I'll try to create a helpful overview by listing various well established definitions before defining a working definition in this project.
 
-#### 1. Oxford Dictionary
-According to the Oxford dictionary, Information can be defined as "*facts or details about somebody/something*", with leads to the need of defining what a "Fact" or "Detail" as well as what "something" entails.
-In order to get  going, some working definitions have to be made here.
+### 1. Oxford Dictionary
+According to the Oxford dictionary, Information can be defined as "*facts or details about somebody/something*"
 
-#### 2. More perspectives:
-Information is a classic polysemantic word, where it's semantic meaning is largely dependent the given perspective. 
-
+### 2. More perspectives:
+Information is a classical polysemantic word, where it's semantic meaning is largely dependent the given perspective. 
 Hence I want to list the, to my understanding, most common perspectives on Information:
 
 
-* **Philosophical Perspective:** <br>
-Strongly related with notions such as reference, meaning and representation: semantic information has
-intentionality −“aboutness”−, it is directed to other things
+**Philosophical Perspective:** <br>
+Strongly related with notions such as reference, meaning and representation: semantic information has intentionality −“aboutness”−, it is directed to other things.
 
 
 * **Scientific Perspective**: <br>
-Problems are expressed in terms of a notion of information amenable to
-quantification
+Problems are expressed in terms of a notion of information amenable to quantification.
+
 * **Mathematical Persepective**:
 <br/><br/>
-    * **Fisher Information:**<br>
-      Measures the dependence of a random variable X on an unknown parameter θ upon which
-the probability of X depends
+    **Fisher Information:**<br>
+      Measures the dependence of a random variable X on an unknown parameter θ upon which the probability of X depends
   <br/><br/>
-    * **Algorithmic information**:<br> 
-      Measures the length of the shortest program that produces a string on a universal [Turing machine](../utils/turing_machines/notes_turing). 
+    **Algorithmic information**:<br> 
+      Measures the length of the shortest program that produces a string on a universal Turing machine. 
   <br/><br/>
-    * **von Neumann Entropy**<br>
-      Gives a measure of the quantum resources necessary to faithfully encode the state of the source-system;
+    **von Neumann Entropy**<br>
+      Gives a measure of the quantum resources necessary to faithfully encode the state of the source-system.
       <br/><br/>
-    * **Shannon Entropy**:<br> is concerned with the statistical
-properties of a given system and the correlations between the states of two systems,
-independently of the meaning and any semantic content of those states. Nowadays, Shannon’s
-theory is a basic ingredient of the communication engineers training. 
+    **Shannon Entropy**:<br> is concerned with the statistical properties of a given system and the correlations between the states of two systems, independently of the meaning and any semantic content of those states. 
 
 
 
-#### 3. Shannon's Communication/Information Theory
+## Famous theories dealing with *Information*: 
+
+### 1. Shannon's Communication/Information Theory
+In this theory, information is thought of as a set of possible messages, and the goal is to send these messages over a noisy channel, 
+and to have the receiver reconstruct the message with low probability of error, in spite of the channel noise.
+
 According to Shannon (1948; see also Shannon and Weaver 1949), a general
 communication system consists of five parts:
 
-* A source S, which generates the message to be received at the destination.
+- A source S, which generates the message to be received at the destination.
 
-* A transmitter T, which turns the message generated at the source into a signal to be transmitted.
-In the cases in which the information is encoded, encoding is also implemented by this system.
+- A transmitter T, which turns the message generated at the source into a signal to be transmitted. In the cases in which the information is encoded, encoding is also implemented by this system.
 
-* A channel CH, that is, the medium used to transmit the signal from the transmitter to the
+-  A channel CH, that is, the medium used to transmit the signal from the transmitter to the
 receiver.
-* A receiver R, which reconstructs the message from the signal.
-* A destination D, which receives the message. 
+
+- A receiver R, which reconstructs the message from the signal.
+
+- A destination D, which receives the message. 
 <br><br>
 
 
 
-#### Central Definitions: 
+#### Central Definitions:
+
+**Binary Digits (Bits)**
+Shannon introduced the concept of binary digits, or bits, as the fundamental unit of information. 
+A bit is a binary digit that can take on one of two values, typically 0 or 1. This concept revolutionized the way information was quantified and transmitted.
+
+
 **Information as a Decrease in Uncertainty**
 Information is defined as a decrease in uncertainty. For example, if Bob is trying to guess which shape Alice is holding, and Alice tells him it is blue, this reduces the set of possible shapes, thereby decreasing Bob's uncertainty.
 
@@ -81,8 +86,7 @@ $$H(X) := -\sum_{x \in X} p(x) \log p(x)$$
 
 where $H(X)$ can be seen as a degree of suprise, or spoken very causually, might be seen as the number of yes/no question one needs to ask (and get answered) to obtain a certain message)
 
-
-
+Maybe the word *Entropy* rings a bell here
 **Link from Physics to Informationtheory & Entropy**
 To quote from [Maxwell and his deamon](https://www.ias.ac.in/public/Volumes/reso/015/06/0548-0560.pdf):
 
@@ -98,10 +102,10 @@ This daemon led Szilárd to close the loop leading to shannons conception of ent
 So eventually, it is all one problem. 
 To reduce entropy in a box of gas, to perfom useful work, one pays the price of information.
 
-**Binary Digits (Bits)**
-Shannon introduced the concept of binary digits, or bits, as the fundamental unit of information. A bit is a binary digit that can take on one of two values, typically 0 or 1. This concept revolutionized the way information was quantified and transmitted.
 
+Amazing.
 
+[Escher](../assets/images/escher_1.jpeg)
  
 
 
