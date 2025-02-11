@@ -749,3 +749,33 @@ section {
     width: 100%;
     height: auto;
 }
+
+
+/* ==== BLOG ==== */
+
+.text-blog {
+    display: flex;
+    width: 100%;
+    padding-top: 25px
+
+}
+
+.textbox-blog {
+    width: 50%
+}
+
+.blog-text {
+    font-family: poppins_regular;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #000000
+}
+
+.list_heading_blog{
+    padding-top: 50px
+
+}

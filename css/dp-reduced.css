@@ -251,6 +251,8 @@ body, html {
     color: #fff
 }
 
+
+
 .masthead_content {
     padding-top: 200px
 }
@@ -369,6 +371,11 @@ section {
 @media screen and (max-width: 767px) {
     .text-home {
         display: block
+    }
+
+    .text-blog {
+        display: block;
+        width: 50%;
     }
 
     .textbox-home:nth-child(2) {
