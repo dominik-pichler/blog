@@ -49,33 +49,85 @@
     </div>
 </nav>
 </nav>
-<!-- Masthead-->
-<header class="masthead">
-    <div class="container h-100 masthead_content">
-        <div class="heading-section">
-            <h3> Some of my thoughts</h3>  
-        </div>
-        <div class="text-blog">
-            <div class="textbox-blog">
-                <p class="blog-text">
-                    Hello and welcome to my small collective space of thoughts, tools and tricks.
-                    In this small space, you'll find my personal summaries, thoughts and short noivce essays. 
-                </p>
-            </div>
 
+
+
+
+
+<section class="container h-100 masthead_content">
+    <div class="text-blog">
+        <div class="textbox-blog blog-text">
+
+            <h3>What the Hell is Knowledge?</h3>
+            <p class="blog-text">
+                What a question. But let's start out small. I assume that in order to understand what knowledge is, I need to start by defining information first.
+            </p>
+        
+            <blockquote style="font-style: italic;">
+                "In the nights when I cannot sleep, thoughts crowd into my mind ... Whence and how do they come? I do not know and I have nothing to do with it. Those which please me, I keep in my head and hum them."
+            </blockquote>
+        
+            <p>
+                But what is information? For this question, many different concepts and theories exist. I'll try to create a helpful overview by listing various well-established definitions before defining a working definition in this project.
+            Information is a classical polysemantic word, where its semantic meaning is largely dependent on the given perspective. Hence, I want to list the, to my understanding, most common perspectives on Information:</p>
+        
+            <h4>Definitions of Information</h4>
+        
+            <h5>Oxford Dictionary</h5>
+            <p>According to the Oxford dictionary, Information can be defined as "<em>facts or details about somebody/something</em>".</p>
+        
+            <h5>Philosophical Perspective</h5>
+            <p>Strongly related with notions such as reference, meaning, and representation: semantic information has intentionality − “aboutness” − it is directed to other things.</p>
+        
+            <h5>Scientific Perspective</h5>
+            <p>Problems are expressed in terms of a notion of information amenable to quantification.</p>
+        
+            <h4>Mathematical Perspective</h4>
+            <ul>
+                <li><strong>Fisher Information:</strong> Measures the dependence of a random variable \( X \) on an unknown parameter \( \theta \) upon which the probability of \( X \) depends.</li>
+                <li><strong>Algorithmic Information:</strong> Measures the length of the shortest program that produces a string on a universal Turing machine.</li>
+                <li><strong>von Neumann Entropy:</strong> Gives a measure of the quantum resources necessary to faithfully encode the state of the source-system.</li>
+                <li><strong>Shannon Entropy:</strong> Concerned with the statistical properties of a given system and the correlations between the states of two systems, independently of the meaning and any semantic content of those states.</li>
+            </ul>
+        
+            <h4>But Why Should We Care?</h4>
+        
+            <h5>1. Communication</h5>
+            <p>Based on my limited experience and time on this planet, I found that a fundamental need of all (or let's say maybe most) humans is to communicate with others—to share, express, and partake in the very existence of each other. Besides the aspects of needs, communication also has a very practical aspect to itself: It helps us navigate through this world, reach our goals, and eventually continue our survival.</p>
+        
+            <h6>Shannon's Communication/Information Theory</h6>
+            <p>In this theory, information is thought of as a set of possible messages. The goal is to send these messages over a noisy channel and have the receiver reconstruct the message with low probability of error despite the channel noise.</p>
+        
+            <p>According to Shannon (1948; see also Shannon and Weaver 1949), a general communication system consists of five parts:</p>
+            <ul>
+                <li>A source (<code>S</code>) that generates the message to be received at the destination.</li>
+                <li>A transmitter (<code>T</code>) that turns the message generated at the source into a signal to be transmitted.</li>
+                <li>A channel (<code>CH</code>) that is used to transmit the signal from the transmitter to the receiver.</li>
+                <li>A receiver (<code>R</code>) that reconstructs the message from the signal.</li>
+                <li>A destination (<code>D</code>) that receives the message.</li>
+            </ul>
+        
+            <p><strong>Key Concepts from Shannon's Theory:</strong></p>
+            <ul>
+                <li><strong>Binary Digits (Bits):</strong> Shannon introduced bits as the fundamental unit of information—a binary digit can take values 0 or 1.</li>
+                <li><strong>Information as a Decrease in Uncertainty:</strong> Information reduces uncertainty. For example, if Bob guesses what shape Alice holds based on her clue (e.g., "it's blue"), uncertainty decreases.</li>
+                <li><strong>Entropy:</strong></li>
+            </ul>
+        
+            `$$
+            H(X) := -∑ p(x) log p(x)
+            $$
+            `
             
+        
+            <p>This formula measures uncertainty or surprise. In simpler terms, it might represent how many yes/no questions one needs answered to obtain certain information.</p>
+        
+            <blockquote>Moral: "The second law of thermodynamics has as much truth as saying if you throw water into an ocean, you cannot retrieve exactly that water."</blockquote>
+        
         </div>
-
-
     </div>
 
-
-</header>
-
-
-
-
-
+</section>
 
 <section id="contact">
     <div class="flexbox-contact container">
